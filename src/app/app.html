@@ -1,0 +1,12 @@
+
+<nav>
+  <div class="navbar-link" ng-repeat="page in vm.pages" ui-sref="page({dataLink: page.link})">{{page.text}}</div>
+</nav>
+<ui-view></ui-view>
+<main>
+  <h1 class="title">Hello from Angular !</h1>
+
+  <!-- Images (and assets) are parsed and loaded from within the public directory -->
+</main>
+<footer>
+</footer>
