@@ -4,7 +4,7 @@ import controller from './pages.controller';
 export default function routes($stateProvider, $urlRouterProvider) {
     $stateProvider.state('page', {
         url: '/:dataLink',
-        template: require('./pages.tpl.html'),
+        template: '<subpage data="vm.page"></subpage>',
         controller: controller.UID,
         controllerAs: 'vm',
         resolve: {

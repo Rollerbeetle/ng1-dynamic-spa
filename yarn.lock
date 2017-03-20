@@ -68,13 +68,17 @@ angular-mocks@^1.5.0:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/angular-mocks/-/angular-mocks-1.6.2.tgz#fbb28208e74d3512769afdb8771f5cc5a99f9128"
 
-angular-ui-router@^0.4.2:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/angular-ui-router/-/angular-ui-router-0.4.2.tgz#b6aed1ca69a683c82e3992898eabd4ba15868608"
-  dependencies:
-    angular "^1.0.8"
+angular-sanitize@1.6.2:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/angular-sanitize/-/angular-sanitize-1.6.2.tgz#8a327c1acb2c14f50da5b5cad5ea452750a1a375"
 
-angular@^1.0.8, angular@^1.5.0:
+angular-ui-router@^1.5.0:
+  version "1.0.0-rc.1"
+  resolved "https://registry.yarnpkg.com/angular-ui-router/-/angular-ui-router-1.0.0-rc.1.tgz#2d168230e8204fc8d2a93d1007ad49b9f33d09c6"
+  dependencies:
+    ui-router-core "3.1.0"
+
+angular@1.6.2:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/angular/-/angular-1.6.2.tgz#d0b677242ac4bf9ae81424297c6320973af4bb5a"
 
@@ -4521,6 +4525,10 @@ uglify-js@2.8.x, uglify-js@^2.6, uglify-js@^2.7.5:
 uglify-to-browserify@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz#6e0924d6bda6b5afe349e39a6d632850a0f882b7"
+
+ui-router-core@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/ui-router-core/-/ui-router-core-3.1.0.tgz#c297e8198631ab2e36892a95d0f9a92c18efbc17"
 
 uid-number@~0.0.6:
   version "0.0.6"

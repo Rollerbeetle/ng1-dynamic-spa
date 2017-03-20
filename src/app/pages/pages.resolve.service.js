@@ -3,7 +3,8 @@
 const BASE_URL = 'http://www.json-generator.com/api/json/get/';
 
 export default class PagesResolveService {
-  static get UID () {
+  
+  static get UID() {
     return 'PagesResolveService';
   }
 

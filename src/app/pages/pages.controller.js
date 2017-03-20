@@ -8,6 +8,5 @@ export default class PagesCtrl {
 
   constructor(page) {
     this.page = page;
-    console.log(page);
   }
 }

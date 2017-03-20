@@ -5,10 +5,13 @@ import routes from './app.routes';
 
 //internal
 import pagesComponent from './pages';
+import subpageDirective from './subpage';
+import spotsDirective from './spots'
 
 //external
 import 'angular-ui-router';
 import '../style/app.scss';
+import ngSanitize from 'angular-sanitize';
 
 let app = () => {
   return {
@@ -31,7 +34,10 @@ const MODULE_NAME = 'app';
 /*@ngInject*/
 angular.module(MODULE_NAME, [
   'ui.router',
-  pagesComponent
+  ngSanitize,
+  pagesComponent,
+  subpageDirective,
+  spotsDirective
 ])
   .directive('app', app)
   .controller('AppCtrl', AppCtrl)
