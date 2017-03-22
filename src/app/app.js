@@ -6,7 +6,8 @@ import routes from './app.routes';
 //internal
 import pagesComponent from './pages';
 import subpageDirective from './subpage';
-import spotsDirective from './spots'
+import spotsDirective from './spots';
+import commerceModule from './commerce';
 
 //external
 import 'angular-ui-router';
@@ -37,7 +38,8 @@ angular.module(MODULE_NAME, [
   ngSanitize,
   pagesComponent,
   subpageDirective,
-  spotsDirective
+  spotsDirective,
+  commerceModule
 ])
   .directive('app', app)
   .controller('AppCtrl', AppCtrl)

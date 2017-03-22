@@ -9,10 +9,8 @@ export default function() {
     },
     restrict: 'E',
     controller: function($scope) {
-      $scope.data = $scope.spots;
       //function used on the ng-include to resolve the template
       $scope.getTemplateUrl = function(spot) {
-        console.log(spot);
         //basic handling
         return `${spot.type.toLowerCase()}.tpl.html`;
       }
