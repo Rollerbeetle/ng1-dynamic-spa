@@ -38,6 +38,9 @@ h5 {
 	margin:0 0 10px;
 	font-size:16px;
 }
+.price {
+  font-size: 14px;
+}
 
 .navigation {
 	display:block;
@@ -62,13 +65,15 @@ h5 {
 }
 product {
 	font-size:12px;
-	flex: 0 1 49%;
+	flex: 1 0 19%;
 	border:1px solid #000;
 	position:relative;
+  max-width: 300px;
+  min-width: 250px;
 }
 favorite {
 	position:absolute;
-	right:80px;
+	right:0;
 	top:0;
 }
 favorite button {
@@ -79,4 +84,9 @@ favorite button {
 	cursor:pointer;
 	font-size:22px !important;
 	color:red;
+}
+add-to-basket{
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }

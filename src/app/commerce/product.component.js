@@ -5,7 +5,8 @@ export default {
 		<div ng-style="{'opacity': vm.product.availability ? 1 : 0.5}">
 			<h5>{{vm.product.name}}</h5>
 			<favorite product="vm.product" toggle-favorite="vm.toggleFavorite()">fav</favorite>
-			<div>Pris: {{vm.product.price}}</div>
+      <img ng-src="{{vm.product.image}}" height="200" width="200" />
+			<div class="price">Pris: {{vm.product.price}}</div>
 			<add-to-basket product="vm.product" on-purchase="vm.buy(count)"></add-to-basket>
 		</div>
 	`,
@@ -20,7 +21,6 @@ export default {
 
 /*@ngInject*/
 function ProductCtrl() {
-
   this.buy = (count) => {
     this.purchase({product: this.product, count});
   }
