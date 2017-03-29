@@ -12,7 +12,9 @@ export default {
   controller: ProductCtrl,
   controllerAs: 'vm',
   bindings: {
-    product: '=data'
+    product: '=data',
+    purchase: '&',
+    toggleFavorite: '&'
   }
 }
 
@@ -20,11 +22,11 @@ export default {
 function ProductCtrl() {
 
   this.buy = (count) => {
-    this.product.basketCount = count;
+    this.purchase({product: this.product, count});
   }
 
   this.toggleFavorite = () => {
-    this.product.isfavorite = !this.product.isfavorite;
+    this.toggleFavorite({product: this.product});
   }
 
 }

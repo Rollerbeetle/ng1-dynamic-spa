@@ -6,7 +6,7 @@ export default {
   <button ng-style="{'font-weight': vm.params.sortBy === 'price' ? 'bold' : ''}" ng-click="vm.sort('price')">Pris</button>
   <button ng-style="{'font-weight': vm.params.filter === 'isfavorite' ? 'bold' : ''}" ng-click="vm.toggleShowFavorites()">Only favorites</button>
   <div class="items">
-    <product data="product" ng-repeat="product in vm.products | orderBy: vm.params.sortBy | filter:vm.filter" ></product>
+    <product data="product" purchase="vm.purchase(product, count)" toggle-favorite="vm.toggleFavorite(product)" ng-repeat="product in vm.products | orderBy: vm.params.sortBy | filter:vm.filter" ></product>
   </div>
   `,
   controller: ProductListCtrl,
@@ -41,6 +41,16 @@ function ProductListCtrl(ProductService) {
       } else {
         return true;
       }
+    }
+
+    this.purchase = (product, count) => {
+      let i = this.products.indexOf(product);
+      this.products[i].basketCount = count;
+    }
+
+    this.toggleFavorite = (product) => {
+      let i = this.products.indexOf(product);
+      this.products[i].isfavorite = !this.products[i].isfavorite;
     }
 
 }
