@@ -21,7 +21,6 @@ function ProductCtrl() {
 
   this.buy = (count) => {
     this.product.basketCount = count;
-    console.log(this.product);
   }
 
   this.toggleFavorite = () => {
