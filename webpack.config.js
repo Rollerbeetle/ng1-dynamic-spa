@@ -31,7 +31,8 @@ module.exports = function makeWebpackConfig() {
    * Karma will set this when it's a test build
    */
   config.entry = isTest ? void 0 : {
-    app: './src/app/app.js'
+    app: './src/app/app.js',
+    vendor: ['angular', 'angular-ui-router', 'angular-sanitize']
   };
 
   /**
@@ -195,6 +196,9 @@ module.exports = function makeWebpackConfig() {
 
       // Only emit files when there are no errors
       new webpack.NoEmitOnErrorsPlugin(),
+
+       new webpack.optimize.CommonsChunkPlugin({name:"vendor"}),
+
 
       // Reference: http://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin
       // Minify all javascript, switch loaders to minimizing mode
