@@ -7,13 +7,21 @@ export default class ProductService {
   }
 
   /*@ngInject*/
-  constructor($http) {
+  constructor($http, SharedCache) {
     this.$http = $http;
+    this.cache = SharedCache;
+
+    this.products = this.cache.get('products') ? this.cache.get('products') : [];
   }
 
-  get() {
+  getProducts() {
+    if (this.products.length) {
+      return this.products;
+    }
     return this.$http.get(url)
       .then(response => {
+        this.cache.put('products', response.data);
+        this.products = response.data;
         return response.data;
       });
   }

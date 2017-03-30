@@ -21,7 +21,7 @@ function ProductListCtrl(ProductService) {
   		sortDir: '+',
   		filter:''
     }
-    ProductService.get().then(data => this.products = data);
+    ProductService.getProducts().then(data => this.products = data);
 
     this.sort = (key) => {
       this.params.sortBy = key;

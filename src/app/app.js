@@ -8,6 +8,7 @@ import pagesComponent from './pages';
 import subpageDirective from './subpage';
 import spotsDirective from './spots';
 import commerceModule from './commerce';
+import sharedModule from './shared';
 
 //external
 import 'angular-ui-router';
@@ -39,7 +40,8 @@ angular.module(MODULE_NAME, [
   pagesComponent,
   subpageDirective,
   spotsDirective,
-  commerceModule
+  commerceModule,
+  sharedModule
 ])
   .directive('app', app)
   .controller('AppCtrl', AppCtrl)
