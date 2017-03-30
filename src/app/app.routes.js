@@ -1,4 +1,3 @@
-
 /*@ngInject*/
 export default function routes($stateProvider, $urlRouterProvider, $locationProvider) {
     $stateProvider.state('/', {});

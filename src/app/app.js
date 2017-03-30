@@ -27,7 +27,6 @@ class AppCtrl {
   static get UID() {
     return 'AppCtrl';
   }
-  /*@ngInject*/
   constructor() {
     this.pages = pages;
   }
