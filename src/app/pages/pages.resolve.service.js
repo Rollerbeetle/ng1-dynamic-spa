@@ -10,6 +10,7 @@ export default class PagesResolveService {
 
   /*@ngInject*/
   constructor($http, SharedCache) {
+    "ngInject";
     this.$http = $http;
     this.cache = SharedCache;
   }

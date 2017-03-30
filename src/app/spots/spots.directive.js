@@ -9,6 +9,7 @@ export default function() {
     },
     restrict: 'E',
     controller: function($scope) {
+      "ngInject";
       //function used on the ng-include to resolve the template
       $scope.getTemplateUrl = function(spot) {
         //basic handling

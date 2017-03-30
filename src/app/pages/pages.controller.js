@@ -7,6 +7,8 @@ export default class PagesCtrl {
   }
 
   constructor(page) {
+    "ngInject";
+
     this.page = page;
   }
 }
