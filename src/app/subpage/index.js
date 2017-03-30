@@ -4,9 +4,10 @@ import config from './subpage.config';
 
 const MODULE_NAME = "subpage"
 
+/*@ngInject*/
 angular.module(MODULE_NAME, [])
 .directive(MODULE_NAME, directive)
-.run(config)
+.config(config)
 .name;
 
 export default MODULE_NAME;
