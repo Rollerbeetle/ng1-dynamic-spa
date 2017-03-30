@@ -16,7 +16,9 @@ export default class ProductService {
 
   getProducts() {
     if (this.products.length) {
-      return this.products;
+      return new Promise(resolve => {
+        resolve(this.products)
+      });
     }
     return this.$http.get(url)
       .then(response => {
