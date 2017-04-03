@@ -4,10 +4,11 @@
   "description": "",
   "scripts": {
     "build": "rimraf dist && webpack --bail --progress --profile",
-    "server": "webpack-dev-server -p --history-api-fallback --inline --progress",
+    "serve:dev": "webpack-dev-server -p --history-api-fallback --inline --progress",
+    "serve:prod": "node server.js",
     "test": "karma start",
     "test-watch": "karma start --auto-watch --no-single-run",
-    "start": "npm run server"
+    "start": "npm run serve:dev"
   },
   "author": "ESO",
   "license": "MIT",
@@ -24,6 +25,7 @@
     "babel-preset-es2015": "^6.1.18",
     "copy-webpack-plugin": "4.0.1",
     "css-loader": "0.26.1",
+    "express": "^4.15.2",
     "extract-text-webpack-plugin": "2.0.0-beta.5",
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.7.1",
