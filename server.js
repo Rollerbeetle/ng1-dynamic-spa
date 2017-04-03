@@ -8,7 +8,7 @@ app.use('/img', express.static(__dirname + '/img'));
 app.use(express.static(__dirname + '/dist'));
 
 
-app.all('/', function(req, res, next) {
+app.all('/*', function(req, res, next) {
     // Just send the index.html for other files to support HTML5Mode
     res.sendFile('index.html', { root: __dirname + '/dist' });
 });
