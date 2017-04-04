@@ -1,5 +1,8 @@
+var compression = require('compression')
 var express = require('express');
 var app = express();
+app.use(compression({ threshold: 0 }));
+
 
 const PORT = 3006
 
